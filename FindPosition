@@ -23,6 +23,8 @@ int FindPosition(int input1) {
     return position;
 }
 
+//you can remove exception throw 
+
 // as it is already assume
 //int main() {
   //  int input = 2;
