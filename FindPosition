@@ -1,0 +1,32 @@
+Language: CPP
+
+// Consider Fibinacci  sequence: 0 1 1 2 3 5 8 13 21 .. Given a number x, find it's position in fibonacci sequence
+
+#include <iostream>
+
+int FindPosition(int input1) {
+    if (input1 == 0 || input1 == 1)
+        return 2;
+
+    int a = 0;
+    int b = 1;
+    int fib = 1;
+    int position = 2;
+
+    while (fib != input1) {
+        fib = a + b;
+        a = b;
+        b = fib;
+        position++;
+    }
+
+    return position;
+}
+
+// as it is already assume
+//int main() {
+  //  int input = 2;
+  //  int position = FindPosition(input);
+  //  std::cout << "Output: " << position << std::endl;
+  //  return 0;
+//}
