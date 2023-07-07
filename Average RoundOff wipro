@@ -1,0 +1,18 @@
+#Language: Python
+
+#remember to import math
+#give proper indentation inside def function
+
+import math
+def findAverageRoundOff(cls, input1, input2):
+
+    Avg = sum(input1) / input2
+    string = str(Avg)
+    index = string.find('.')
+    digit_after_decimal = int(string[index + 1])
+
+    if digit_after_decimal >= 1 and digit_after_decimal <= 5:
+        return math.floor(Avg)
+    elif digit_after_decimal >= 6 and digit_after_decimal <= 9:
+        return math.ceil(Avg)
+
